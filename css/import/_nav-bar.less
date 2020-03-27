@@ -1,0 +1,62 @@
+//caso de problema ao mimificar >> npm install -g less-plugin-clean-css
+
+//**** COMANDOS EXENCIAIS
+// para compilar para css usa-se lessc style.less > style.css
+//Para mimificar usa-se lessc --clean-css style.less > style.min.css
+
+
+// *** CRIAR VARIÁVEL
+//@fonte_size_header: 20px;
+//@color_header: #ff2;
+//.title-nav{
+//    font-size: @fonte_size_header;
+//    h1{
+//        color: @color_header;
+//    }
+//    p{
+//        font-size: 16px;
+//    }
+//}
+
+// Gards protege os mixins - usa-se when and ,(ou)
+//Namespace - manter o codigo mais organizado
+
+// *** CRIAR MIXINS
+//*usando o WHEN - Virgula tem efeito do OU e AND  para e
+.nav-barWhen(@color_black: #ff2) when(@color_blak = #ff5438), (@fonte_size <= 15px){ }//nao retorna por ser falso
+.nav-barAnd(@color_black: #ff2) when(@color_blak = #ff5438) and (@fonte_size <= 15px){} //nao retorna por ser falso
+.nav-bar(@color_black: #ff2, @color_text: #fff, @size_desc: 14px, @fontH1:14px){ // colocando cor de fundo como variavel / caso queira definir o valor na cor, entao noa precisa colocar parametro quanod for chamar esse mixin
+  width: 100%;
+  height: 80px;
+  background-color: lighten(@color_black, 10%); // lighten é usado para controlar a luz das cores
+  position: relative;
+  min-height: 50px;
+  // margin-bottom: ceil(19.6px / 4px); //arredonda para cima
+  // margin-bottom: percenteage(19.6px / 4px); //porcentagem da conta
+  margin-bottom: round(19.6px / 4px); //arredondamento
+  border: 1px solid  @color_black - #4478ff; // operações matematicas realizando essa conta a cor será preta
+  font-size: 16px;
+  color: @color_text;
+  h1{
+    position: relative;
+    margin-top: 14px;
+    margin-left: 20px;
+    margin-bottom: 0;
+    fonte-size: @fontH1;
+  }
+  p{
+    position: relative;
+    color: #fff;
+    font-size: @size_desc;
+    margin-top: 0;
+    margin-left: 30px;
+  }
+}
+.nav1{
+  //.nav-bar(#fff); // quando nao está definido
+  .nav-bar(); // quando define o parametro no mixin
+}
+
+.nav2{
+  .nav-bar(darken(#3437ff, 40%), #f3f3ff, 30px, 15px); // saturate / desaturate/
+}

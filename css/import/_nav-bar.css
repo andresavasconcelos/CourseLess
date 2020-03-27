@@ -1,0 +1,51 @@
+.nav1 {
+  width: 100%;
+  height: 80px;
+  background-color: #ffff55;
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 5px;
+  border: 1px solid #bb8700;
+  font-size: 16px;
+  color: #fff;
+}
+.nav1 h1 {
+  position: relative;
+  margin-top: 14px;
+  margin-left: 20px;
+  margin-bottom: 0;
+  fonte-size: 14px;
+}
+.nav1 p {
+  position: relative;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 0;
+  margin-left: 30px;
+}
+.nav2 {
+  width: 100%;
+  height: 80px;
+  background-color: #00029a;
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 5px;
+  border: 1px solid #000000;
+  font-size: 16px;
+  color: #f3f3ff;
+}
+.nav2 h1 {
+  position: relative;
+  margin-top: 14px;
+  margin-left: 20px;
+  margin-bottom: 0;
+  fonte-size: 15px;
+}
+.nav2 p {
+  position: relative;
+  color: #fff;
+  font-size: 30px;
+  margin-top: 0;
+  margin-left: 30px;
+}
+/*# sourceMappingURL=_nav-bar.css.map */
